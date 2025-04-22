@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Event Schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "事件的唯一标识符"
+    },
+    "project": {
+      "type": "string",
+      "description": "项目号，标识事件所属项目"
+    },
+    "version": {
+      "type": "string",
+      "description": "版本号，标识事件所属版本"
+    },
+    "context": {
+      "type": "string",
+      "description": "上下文号，标识事件所属上下文环境"
+    },
+    "entity": {
+      "type": "string",
+      "description": "实体号，标识事件所属实体"
+    },
+    "event": {
+      "type": "string",
+      "description": "事件号，标识事件类型"
+    },
+    "source": {
+      "type": "string",
+      "description": "事件来源，标识事件发起者"
+    },
+    "params": {
+      "type": "string",
+      "description": "事件参数，JSON格式字符串"
+    },
+    "accessToken": {
+      "type": "string",
+      "description": "访问令牌，用于权限验证"
+    },
+    "createdAt": {
+      "type": "integer",
+      "description": "创建时间戳",
+      "format": "int64"
+    },
+    "sign": {
+      "type": "string",
+      "description": "签名，用于验证事件完整性"
+    }
+  },
+  "required": [
+    "id",
+    "project",
+    "version",
+    "context",
+    "entity",
+    "event",
+    "source",
+    "params",
+    "accessToken",
+    "createdAt",
+    "sign"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,18 @@
+// 零拷贝string，序列化速度是 Sonic 的 5 倍，反序列化速度是 Sonic 的 22 倍。
+goos: darwin
+goarch: amd64
+pkg: code/msg_vs_json
+cpu: Intel(R) Core(TM) i7-4770HQ CPU @ 2.20GHz
+BenchmarkSonicMarshal-8                  1743409               645.7 ns/op
+BenchmarkSonicMarshal-8                  1767374               657.7 ns/op
+BenchmarkSonicMarshal-8                  1780034               649.3 ns/op
+BenchmarkSonicUnmarshal-8                1282749               869.4 ns/op
+BenchmarkSonicUnmarshal-8                1294518               878.0 ns/op
+BenchmarkSonicUnmarshal-8                1250925               870.8 ns/op
+BenchmarkRequestPacketMarshal-8          6914083               147.4 ns/op
+BenchmarkRequestPacketMarshal-8          9104539               130.3 ns/op
+BenchmarkRequestPacketMarshal-8          9154987               127.6 ns/op
+BenchmarkRequestPacketUnmarshal-8       30505122                38.14 ns/op
+BenchmarkRequestPacketUnmarshal-8       29271840                38.10 ns/op
+BenchmarkRequestPacketUnmarshal-8       30248804                38.27 ns/op
+PASS

@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "JSON Response Schema",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string",
+      "description": "响应码，表示操作结果状态"
+    },
+    "createdAt": {
+      "type": "integer",
+      "description": "响应创建时间戳（毫秒）",
+      "format": "int64"
+    },
+    "message": {
+      "type": "string",
+      "description": "响应消息，对状态的文字描述"
+    },
+    "list": {
+      "type": "array",
+      "description": "响应数据列表",
+      "items": {}
+    },
+    "total": {
+      "type": "integer",
+      "description": "数据总数（用于分页）",
+      "format": "int64"
+    },
+    "size": {
+      "type": "integer",
+      "description": "当前页数据大小"
+    },
+    "page": {
+      "type": "integer",
+      "description": "当前页码"
+    }
+  },
+  "required": [
+    "code",
+    "createdAt",
+    "message",
+    "list",
+    "total",
+    "size",
+    "page"
+  ],
+  "additionalProperties": false
+}

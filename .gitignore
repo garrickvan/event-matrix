@@ -1,0 +1,19 @@
+# others
+**/download
+/pyend/myenv
+**/tmp
+**/go.sum
+**/*.pyc
+**/*.log
+**/*.slice_log
+**/*.db
+**/yarn-error.log
+**/yarn.lock
+**/yarn.lock.lock
+**/package-lock.json
+**/node_modules
+**/build
+**/main
+**/*.code-workspace
+**/.air.toml
+**/.vscode
