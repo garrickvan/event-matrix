@@ -1,26 +1,20 @@
-<p align="center">
-  <a href="https://eventmatrix.cn" rel="noopener">
- <img width=120px height=120px src="https://eventmatrix.cn/img/logo.svg" alt="项目logo"></a>
+<h3>Event Matrix - 事件矩阵</h3>
+
+<p>
+    EventMatrix 基于业务事件驱动的开发框架，借鉴DDD思想，通过解耦业务设计+轻量级低代码，为AI时代后端开发提供高效解决方案。
+    <br>
 </p>
-
-<h3 align="center">事件矩阵</h3>
-<p>业务事件驱动，高度解耦，轻量级低代码，更适合AI时代的新型开发框架</pÏ>
-
-<div align="center">
+<div>
 
 [![状态](https://img.shields.io/badge/status-活跃-success.svg)]()
 [![Go版本](https://img.shields.io/badge/Go-1.23+-blue.svg)](https://golang.org/doc/devel/release.html)
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/garrickvan/event-matrix/main/LICENSE)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/garrickvan/event-matrix/blob/master/LICENSE)
 
 </div>
 
 ---
 
-<p align="center">
-    Event Matrix 是一个基于业务事件驱动的开发框架，通过高度解耦设计和轻量级低代码模式，为AI时代的系统开发提供高效灵活的解决方案。
-    <br>
-    <a href="https://eventmatrix.cn"><strong>探索文档 »</strong></a>
-</p>
+<a href="https://eventmatrix.cn"><h4>探索文档 »</h4></a>
 
 ## 📝 目录
 
@@ -51,19 +45,19 @@ Event Matrix 秉承"简单、灵活、高效"的设计哲学，采用六边形�
 
   - 支持微服务/单体/中间件架构
   - 平滑架构演进能力
-  - 动态模块加载
 
 - **开发效率提升**
 
   - 低代码开发支持
   - AI 辅助代码生成
-  - 可视化规则编排
+  - 业务规则编排
 
-- **轻量级核心**
+- **核心简洁而不简单**
 
-  - 仅需 Gateway + Worker 双角色
-  - 内置服务发现与监控
-  - 自动负载均衡
+  - 仅 Gateway、Worker 系统角色
+  - 内置用户，JWT，权限等各种开箱即用功能
+  - 事件负载均衡
+  - 自带管理后台
 
 ## 🏁 快速开始 <a name="getting_started"></a>
 
@@ -74,6 +68,8 @@ Event Matrix 秉承"简单、灵活、高效"的设计哲学，采用六边形�
 - [Hertz](https://github.com/cloudwego/hertz) - 高性能 HTTP 框架
 - [Gnet](https://github.com/panjf2000/gnet) - 服务间通信
 - [Gorm](https://github.com/go-gorm/gorm) - Golang ORM
+- [ristretto](https://github.com/hypermodeinc/ristretto) - 本地缓存库
+- [sonic](https://github.com/bytedance/sonic) - 高性能 JSON 解析器
 
 ## 🤝 贡献指南 <a name="contributing"></a>
 
@@ -86,4 +82,4 @@ Event Matrix 秉承"简单、灵活、高效"的设计哲学，采用六边形�
 
 ## 📄 许可证
 
-本项目采用 Apache 2.0 许可证 - 查看 [LICENSE](https://github.com/garrickvan/event-matrix/blob/main/LICENSE) 文件了解详细信息。
+本项目采用 Apache 2.0 许可证 - 查看 [LICENSE](https://github.com/garrickvan/event-matrix/blob/master/LICENSE) 文件了解详细信息。
