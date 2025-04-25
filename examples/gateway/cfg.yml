@@ -1,0 +1,41 @@
+gateway:
+  server_id: "gateway-1" # 服务器编号
+  version: 0.0.1 # 版本号
+  mode: dev # 运行模式，dev/prod
+  log_level: debug # 日志级别，debug/info/warn/error
+  log_location: logs # 日志文件存放位置
+
+  public_port: 3030 # 公网端口
+  http_read_timeout: 10 # 单位秒，http请求读取超时时间
+  http_write_timeout: 10 # 单位秒，http请求写入超时时间
+  static_mount_point: event_gateway # 静态文件挂载点
+
+  intranet_host: 127.0.0.1 # 内网地址
+  intranet_port: 3031 # 内网端口
+  intranet_secret_algor: AES-256 # AES-128, AES-192, AES-256，None则不加密
+  intranet_client_max_idle_conns_per_host: 300 # 对外调用的httpclient持有的最大空闲连接数，尽量设大，提高并发性能
+
+  default_cache_max_men: 5242880 # 本地缓存最大占用内存：50MB
+  default_cache_ttl: 300 #  单位秒，本地缓存超时失效： 5分钟
+
+  domain_cache_max_men: 5242880 # 领域对象（项目、上下文、实体等）缓存最大占用内存：50MB
+  domain_cache_ttl: 1800 #  单位秒，领域对象缓存超时失效： 30分钟
+
+  jwt_refresh_token_expire: 2592000 # 单位秒，这是30天，此时间决定用户客户端最长保持登录时间
+  jwt_access_token_expire: 300 # 前端请求的access_token过期时间，单位秒
+  jwt_pre_mix_length: 5 # 前端请求的access_token混淆长度，越长越安全，但会增加计算时间
+  jwt_sign_length: 45 # 前端请求的access_token签名长度，越长越安全，但会增加计算时间
+  jwt_token_algor: HS256 # HS384, HS512
+
+  max_online_version: 2 # 每个项目最大在线版本数
+  root_user_email: example@qq.com # 超级管理员邮箱，第一次启动时初始化一次
+  root_user_password: Ab123456 # 超级管理员密码，第一次启动时初始化一次
+  login_limit_times: 5 # 登录失败限制次数
+  password_salt_size: 50 # 密码加盐长度，越长越安全，但会增加计算时间
+  password_salt_recout: 2 # 密码加盐重算次数，越大越安全，但会增加计算时间
+
+databases:
+  - type: sqlite
+    location: gateway_data
+    log_sql: false
+    db_name: event_gateway

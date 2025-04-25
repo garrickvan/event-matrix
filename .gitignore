@@ -6,7 +6,6 @@
 **/*.pyc
 **/*.log
 **/*.slice_log
-**/*.db
 **/yarn-error.log
 **/yarn.lock
 **/yarn.lock.lock
@@ -17,3 +16,4 @@
 **/*.code-workspace
 **/.air.toml
 **/.vscode
+examples/basic/sqlite
